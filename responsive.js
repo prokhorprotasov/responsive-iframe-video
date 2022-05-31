@@ -47,12 +47,16 @@ function videoIframe_MakeResponsive(provider, defaultRatio = '16/9') {
             css(wrapper, {
                 'width': '100%',
                 'position': 'relative',
-                'aspect-ratio': aspectratio
+                'aspect-ratio': aspectratio,
+                'padding': '0'
             })
             css(iframe, {
                 'width': '100%',
                 'height': '100%',
-                'position': 'absolute'
+                'position': 'absolute',
+                'top': '0',
+                'left': '0',
+                'margin': '0'
             })
         }
     })
