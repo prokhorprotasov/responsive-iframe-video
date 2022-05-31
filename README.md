@@ -18,3 +18,6 @@ autorun(function () {
     videoIframe_MakeResponsive('youtube')
 ```
 - you can specify default aspect ratio if the iframe doesn't have width and height attributes
+```javascript
+    videoIframe_MakeResponsive('youtube', '16/9')
+```
