@@ -31,7 +31,7 @@ function autorun(callback) {
 
 // responsive iframe
 function videoIframe_MakeResponsive(provider, defaultRatio = '16/9') {
-    document.querySelectorAll('iframe[src*="' + provider + '"]').forEach(iframe => {
+    document.querySelectorAll('iframe[src*="' + provider + '"]').forEach((iframe) => {
         if (!iframe.classList.contains('videoIframeFixed')) { // fix only new iframes
             let width = iframe.getAttribute('width')
             let height = iframe.getAttribute('height')
