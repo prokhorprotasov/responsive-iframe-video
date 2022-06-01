@@ -33,14 +33,14 @@ function autorun(callback) {
 function videoIframe_MakeResponsive(provider, defaultRatio = '16/9') {
     document.querySelectorAll('iframe[src*="' + provider + '"]').forEach((iframe) => {
         if (!iframe.classList.contains('videoIframeFixed')) { // fix only new iframes
-            let width = iframe.getAttribute('width')
-            let height = iframe.getAttribute('height')
-            let aspectratio = (width && height) ? Math_ratio(width, height) : defaultRatio
+            const width = iframe.getAttribute('width')
+            const height = iframe.getAttribute('height')
+            const aspectratio = (width && height) ? Math_ratio(width, height) : defaultRatio
             iframe.removeAttribute('width') // reset
             iframe.removeAttribute('height') // reset
             iframe.classList.add('videoIframeFixed') // for future reference
             // wrapper container
-            let wrapper = document.createElement('div')
+            const wrapper = document.createElement('div')
             iframe.parentNode.insertBefore(wrapper, iframe)
             wrapper.appendChild(iframe) // move iframe inside
             // style
